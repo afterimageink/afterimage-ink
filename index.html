@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#09070e">
-<title>AFTERIMAGE INK</title>
 <meta name="description" content="AFTERIMAGE INK — 2,222 creations. Four rarities. One universe on INK Chain.">
+<title>AFTERIMAGE INK</title>
 
 <style>
 :root {
@@ -27,55 +26,43 @@ body {
   line-height: 1.75;
 }
 a { color: inherit; text-decoration: none; }
-button, input { font: inherit; }
+button { font: inherit; }
 .container { width: 92%; max-width: 1080px; margin: auto; }
-header {
-  border-bottom: 1px solid var(--border);
-  padding: 20px 0;
-}
+header { border-bottom: 1px solid var(--border); padding: 20px 0; }
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 15px; flex-wrap: wrap;
 }
 .logo { font-weight: 900; letter-spacing: 2px; }
 .logo span, .purple { color: var(--purple); }
-.nav-links { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.nav-links {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  font-size: 13px; color: var(--muted);
+}
 .hero { text-align: center; padding: 30px 0 55px; }
 .banner-wrap {
   border: 1px solid var(--border);
-  border-radius: 14px;
-  overflow: hidden;
-  margin-bottom: 35px;
+  border-radius: 14px; overflow: hidden; margin-bottom: 35px;
 }
 .banner { display: block; width: 100%; height: auto; }
 .eyebrow {
-  color: var(--purple);
-  letter-spacing: 3px;
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: var(--purple); letter-spacing: 3px;
+  font-size: 11px; font-weight: bold; text-transform: uppercase;
 }
 h1 { font-size: clamp(34px, 7vw, 65px); line-height: 1.2; margin: 12px 0; }
 h2 { font-size: clamp(25px, 5vw, 38px); line-height: 1.3; margin: 8px 0 12px; }
 h3 { font-size: 23px; line-height: 1.4; margin: 8px 0; }
 .intro { max-width: 700px; margin: auto; color: var(--muted); font-size: 14px; }
 .intro p { margin: 9px 0; }
-.actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.actions {
+  display: flex; justify-content: center;
+  flex-wrap: wrap; gap: 10px; margin-top: 24px;
+}
 .btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 11px 18px;
-  background: var(--panel);
-  color: var(--text);
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
+  display: inline-flex; justify-content: center; align-items: center;
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 11px 18px; background: var(--panel);
+  color: var(--text); font-size: 12px; font-weight: bold; cursor: pointer;
 }
 .btn-primary { background: var(--purple); color: #160c21; border-color: var(--purple); }
 .btn:hover { filter: brightness(1.15); }
@@ -83,11 +70,18 @@ section { padding: 48px 0; border-top: 1px solid #251932; }
 .section-head { text-align: center; margin-bottom: 28px; }
 .section-head p { color: var(--muted); font-size: 14px; }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
-.stat { text-align: center; padding: 18px 8px; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; }
+.stat {
+  text-align: center; padding: 18px 8px;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+}
 .stat strong { display: block; font-size: clamp(19px, 3vw, 30px); color: var(--purple); }
 .stat span { font-size: 11px; color: var(--muted); }
 .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-.card { border: 1px solid var(--border); background: linear-gradient(145deg, #191126, #0d0a12); border-radius: 12px; overflow: hidden; }
+.card {
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg, #191126, #0d0a12);
+  border-radius: 12px; overflow: hidden;
+}
 .art { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; background: #100b18; }
 .card-body { padding: 20px; }
 .rarity { color: var(--purple); font-size: 11px; font-weight: bold; letter-spacing: 3px; }
@@ -101,30 +95,27 @@ section { padding: 48px 0; border-top: 1px solid #251932; }
   background: var(--panel); border: 1px solid var(--border);
   border-radius: 12px; text-align: center; color: var(--muted); font-size: 14px;
 }
-.campaign { max-width: 700px; margin: auto; padding: 22px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; }
+.campaign {
+  max-width: 700px; margin: auto; padding: 22px;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+}
 .task-list { display: grid; gap: 12px; }
 .task {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  padding: 13px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg);
+  padding: 13px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--bg);
 }
 .task input { width: 18px; height: 18px; accent-color: var(--purple); }
 .task-name { flex: 1; font-size: 13px; }
 .task a { color: var(--purple); font-size: 12px; font-weight: bold; }
-.wallet { border-top: 1px solid var(--border); margin-top: 22px; padding-top: 20px; }
-.wallet label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 8px; }
-.wallet input {
-  width: 100%; padding: 13px; background: var(--bg);
-  color: var(--text); border: 1px solid var(--border); border-radius: 7px;
+footer {
+  padding: 28px 0; text-align: center;
+  border-top: 1px solid var(--border); color: var(--muted); font-size: 12px;
 }
-.wallet-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
-.wallet-buttons button { width: 100%; }
-.note { color: var(--muted); font-size: 11px; text-align: center; margin-top: 13px; }
-footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
 .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
 @media(max-width: 640px) {
   .gallery { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .wallet-buttons { grid-template-columns: 1fr; }
   .card-body { padding: 17px; }
   .nav { align-items: flex-start; flex-direction: column; }
 }
@@ -139,7 +130,7 @@ footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border
       <a href="#collection">Collection</a>
       <a href="#about">About</a>
       <a href="#campaign">Campaign</a>
-      <a href="https://opensea.io/collection/afterimage-ink" target="_blank" rel="noopener">OpenSea ↗</a>
+      <a href="https://opensea.io/collection/afterimage-ink" target="_blank" rel="noopener noreferrer">OpenSea ↗</a>
     </nav>
   </div>
 </header>
@@ -159,8 +150,8 @@ footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border
     <p>A new universe begins on INK Chain. Welcome to AFTERIMAGE INK.</p>
   </div>
   <div class="actions">
-    <a class="btn btn-primary" href="https://opensea.io/collection/afterimage-ink" target="_blank" rel="noopener">VIEW ON OPENSEA ↗</a>
-    <a class="btn" href="https://x.com/Afterimageink" target="_blank" rel="noopener">FOLLOW ON X ↗</a>
+    <a class="btn btn-primary" href="https://opensea.io/collection/afterimage-ink" target="_blank" rel="noopener noreferrer">VIEW ON OPENSEA ↗</a>
+    <a class="btn" href="https://x.com/Afterimageink" target="_blank" rel="noopener noreferrer">FOLLOW ON X ↗</a>
   </div>
 </div>
 
@@ -283,49 +274,39 @@ footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border
   <div class="section-head">
     <div class="eyebrow">Join the Community</div>
     <h2>Be Part of the Universe</h2>
-    <p>Complete the campaign tasks and share your wallet address.</p>
+    <p>Complete the campaign tasks below.</p>
   </div>
 
   <div class="campaign">
     <div class="section-head">
       <h3>AFTERIMAGE INK Campaign</h3>
-      <a class="btn btn-primary" href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener">OPEN CAMPAIGN POST ↗</a>
+      <a class="btn btn-primary" href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener noreferrer">OPEN CAMPAIGN POST ↗</a>
     </div>
 
     <div class="task-list">
       <label class="task">
         <input type="checkbox">
         <span class="task-name">Follow @Afterimageink on X</span>
-        <a href="https://x.com/Afterimageink" target="_blank" rel="noopener">FOLLOW ↗</a>
+        <a href="https://x.com/Afterimageink" target="_blank" rel="noopener noreferrer">FOLLOW ↗</a>
       </label>
 
       <label class="task">
         <input type="checkbox">
         <span class="task-name">Like the campaign post</span>
-        <a href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener">LIKE ↗</a>
+        <a href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener noreferrer">LIKE ↗</a>
       </label>
 
       <label class="task">
         <input type="checkbox">
         <span class="task-name">Repost the campaign post</span>
-        <a href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener">REPOST ↗</a>
+        <a href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener noreferrer">REPOST ↗</a>
       </label>
 
       <label class="task">
         <input type="checkbox">
         <span class="task-name">Comment your wallet address</span>
-        <a href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener">COMMENT ↗</a>
+        <a href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener noreferrer">COMMENT ↗</a>
       </label>
-    </div>
-
-    <div class="wallet">
-      <label for="wallet">Your INK Chain Wallet Address</label>
-      <input id="wallet" type="text" placeholder="Enter your wallet address" autocomplete="off" spellcheck="false">
-      <div class="wallet-buttons">
-        <button class="btn" id="copyWallet" type="button">COPY WALLET</button>
-        <button class="btn btn-primary" id="shareWallet" type="button">SHARE WALLET ON X ↗</button>
-      </div>
-      <p class="note">Checkboxes are for personal tracking and are not automatically verified. Never enter your seed phrase or private key.</p>
     </div>
   </div>
 </div>
@@ -335,8 +316,8 @@ footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border
 <footer>
   <div class="container">
     <div class="footer-links">
-      <a href="https://opensea.io/collection/afterimage-ink" target="_blank" rel="noopener">OpenSea</a>
-      <a href="https://x.com/Afterimageink" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://opensea.io/collection/afterimage-ink" target="_blank" rel="noopener noreferrer">OpenSea</a>
+      <a href="https://x.com/Afterimageink" target="_blank" rel="noopener noreferrer">X / Twitter</a>
       <a href="#collection">Collection</a>
       <a href="#campaign">Campaign</a>
     </div>
@@ -345,55 +326,6 @@ footer { padding: 28px 0; text-align: center; border-top: 1px solid var(--border
     <p>© 2026 AFTERIMAGE INK</p>
   </div>
 </footer>
-
-<script>
-const walletInput = document.getElementById("wallet");
-const copyButton = document.getElementById("copyWallet");
-const shareButton = document.getElementById("shareWallet");
-
-copyButton.addEventListener("click", async function () {
-  const wallet = walletInput.value.trim();
-
-  if (!wallet) {
-    alert("Please enter your wallet address first.");
-    walletInput.focus();
-    return;
-  }
-
-  try {
-    await navigator.clipboard.writeText(wallet);
-    copyButton.textContent = "COPIED!";
-  } catch (error) {
-    walletInput.select();
-    const success = document.execCommand("copy");
-    copyButton.textContent = success ? "COPIED!" : "PLEASE COPY MANUALLY";
-  }
-
-  setTimeout(function () {
-    copyButton.textContent = "COPY WALLET";
-  }, 2000);
-});
-
-shareButton.addEventListener("click", function () {
-  const wallet = walletInput.value.trim();
-
-  if (!wallet) {
-    alert("Please enter your wallet address first.");
-    walletInput.focus();
-    return;
-  }
-
-  const tweet = "My INK Chain wallet for the AFTERIMAGE INK campaign:\n" +
-    wallet + "\n\n" +
-    "https://x.com/Afterimageink/status/2109905769680470116";
-
-  window.open(
-    "https://x.com/intent/post?text=" + encodeURIComponent(tweet),
-    "_blank",
-    "noopener,noreferrer"
-  );
-});
-</script>
 </body>
-          </html>
-          
+</html>
+
