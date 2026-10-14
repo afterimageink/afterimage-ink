@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFTERIMAGE INK | Official Collection</title>
+<meta name="description" content="AFTERIMAGE INK is a 2,222 NFT collection in the INK ecosystem.">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#09070e;color:#f8f3ff;font-family:Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 6%;border-bottom:1px solid #302039}
+.logo{font-weight:900;letter-spacing:1px;color:#c69aff}
+nav a{font-size:13px;margin-left:12px}
+.hero{text-align:center;padding:95px 18px;background:radial-gradient(ellipse at 50% 35%,#502474,#1b1027 43%,#09070e 78%)}
+.tag{font-size:11px;letter-spacing:4px;color:#d0a8ff}
+h1{font-size:clamp(35px,9vw,70px);letter-spacing:2px;margin:24px 0}
+.hero p,.sub{color:#c4b5d1;line-height:1.8}
+.hero p{max-width:520px;margin:0 auto 25px}
+.btn{display:inline-block;border:1px solid #a66af5;padding:13px 19px;border-radius:5px;margin:5px;font-size:13px;font-weight:bold}
+.primary{background:#9955e8;color:white}
+section{max-width:1000px;margin:auto;padding:65px 6%}
+h2{text-align:center;font-size:27px}
+.sub{text-align:center;margin:0 auto 30px;max-width:600px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.item{padding:25px 10px;text-align:center;background:#17101f;border:1px solid #382544;border-radius:8px}
+.item h3{color:#c69aff;font-size:14px}
+.item strong{font-size:27px}
+.item p{color:#ad9bbd;font-size:12px}
+.panel{background:#15101c;border:1px solid #382544;border-radius:10px;padding:25px;line-height:1.8}
+.task{display:flex;gap:10px;align-items:center;padding:15px 0;border-bottom:1px solid #34243e}
+.task input{accent-color:#b17aff;width:17px;height:17px}
+.task a{color:#d1aaff;text-decoration:underline;font-size:13px}
+.field{width:100%;padding:14px;margin:10px 0 18px;background:#09070e;color:white;border:1px solid #72568e;border-radius:5px}
+footer{text-align:center;padding:30px 15px;border-top:1px solid #302039;color:#a99bb5;font-size:12px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+
+<nav>
+<a class="logo" href="#">AFTERIMAGE INK 💜</a>
+<div>
+<a href="#collection">Collection</a>
+<a href="#tasks">Tasks</a>
+</div>
+</nav>
+
+<header class="hero">
+<div class="tag">AN NFT COLLECTION ON INK</div>
+<h1>AFTERIMAGE INK</h1>
+<p>Beyond the light, something remains.<br>
+A collection built around purple light, endless darkness, and the energy that remains.</p>
+<a class="btn primary" href="https://opensea.io/collection/afterimage-ink" target="_blank" rel="noopener">VIEW COLLECTION ↗</a>
+<a class="btn" href="https://x.com/Afterimageink" target="_blank" rel="noopener">FOLLOW ON X</a>
+</header>
+
+<section id="collection">
+<h2>The Collection</h2>
+<p class="sub">2,222 NFTs. Four rarities. One universe.</p>
+
+<div class="grid">
+<div class="item">
+<h3>COMMON</h3>
+<strong>1,500</strong>
+<p>NFTs</p>
+</div>
+<div class="item">
+<h3>RARE</h3>
+<strong>500</strong>
+<p>NFTs</p>
+</div>
+<div class="item">
+<h3>EPIC</h3>
+<strong>180</strong>
+<p>NFTs</p>
+</div>
+<div class="item">
+<h3>LEGENDARY</h3>
+<strong>42</strong>
+<p>NFTs</p>
+</div>
+</div>
+
+<div class="panel" style="text-align:center;margin-top:25px">
+<h3 style="color:#c69aff">THE MYSTERY REMAINS</h3>
+<p>Rarity will be revealed only after the mint is sold out.</p>
+<a class="btn primary" href="https://opensea.io/collection/afterimage-ink" target="_blank" rel="noopener">EXPLORE ON OPENSEA ↗</a>
+</div>
+</section>
+
+<section id="tasks">
+<h2>Join the Community</h2>
+<p class="sub">Complete the tasks and share your INK wallet to join our journey.</p>
+
+<div class="panel">
+<label for="wallet">Your INK Wallet Address</label>
+<input class="field" id="wallet" type="text" placeholder="Enter your INK wallet address">
+
+<div class="task">
+<input type="checkbox" id="follow">
+<label for="follow">Follow @Afterimageink</label>
+<a href="https://x.com/Afterimageink" target="_blank" rel="noopener">Open X ↗</a>
+</div>
+
+<div class="task">
+<input type="checkbox" id="like">
+<label for="like">Like the campaign post</label>
+<a href="https://x.com/Afterimageink" target="_blank" rel="noopener">Open X ↗</a>
+</div>
+
+<div class="task">
+<input type="checkbox" id="retweet">
+<label for="retweet">Retweet the campaign post</label>
+<a href="https://x.com/Afterimageink" target="_blank" rel="noopener">Open X ↗</a>
+</div>
+
+<div class="task">
+<input type="checkbox" id="comment">
+<label for="comment">Comment your INK wallet</label>
+<a href="https://x.com/Afterimageink" target="_blank" rel="noopener">Open X ↗</a>
+</div>
+
+<div style="text-align:center;margin-top:22px">
+<button class="btn primary" type="button" onclick="copyWallet()">COPY WALLET</button>
+<button class="btn" type="button" onclick="shareTasks()">SHARE TASKS ON X</button>
+<p id="message" style="color:#c69aff;font-size:13px"></p>
+</div>
+</div>
+<p class="sub" style="margin-top:18px;font-size:12px">Task completion is self-reported and is not automatically verified.</p>
+</section>
+
+<footer>
+<strong>AFTERIMAGE INK 💜</strong>
+<p>Built with patience. Powered by the community.</p>
+<a href="https://x.com/Afterimageink">X</a> ·
+<a href="https://opensea.io/collection/afterimage-ink">OpenSea</a>
+</footer>
+
+<script>
+function copyWallet(){
+const wallet=document.getElementById('wallet').value.trim();
+const message=document.getElementById('message');
+if(!wallet){
+message.textContent='Please enter your INK wallet address first.';
+return;
+}
+if(navigator.clipboard && window.isSecureContext){
+navigator.clipboard.writeText(wallet).then(()=>{
+message.textContent='Wallet copied. Paste it into your X comment.';
+}).catch(()=>fallbackCopy(wallet,message));
+}else{
+fallbackCopy(wallet,message);
+}
+}
+function fallbackCopy(wallet,message){
+const field=document.getElementById('wallet');
+field.focus();
+field.select();
+try{
+const ok=document.execCommand('copy');
+message.textContent=ok?'Wallet copied. Paste it into your X comment.':'Please copy your wallet manually.';
+}catch(e){
+message.textContent='Please copy your wallet manually.';
+}
+}
+function shareTasks(){
+const wallet=document.getElementById('wallet').value.trim();
+if(!wallet){
+document.getElementById('message').textContent='Enter your INK wallet first.';
+return;
+}
+const text='I am joining the AFTERIMAGE INK journey 💜 My INK wallet: '+wallet+' https://opensea.io/collection/afterimage-ink';
+window.open('https://x.com/intent/post?text='+encodeURIComponent(text),'_blank','noopener');
+}
+</script>
+
+</body>
+</html>
