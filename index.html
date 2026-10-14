@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,13 +102,15 @@ section { padding: 48px 0; border-top: 1px solid #251932; }
 }
 .task-list { display: grid; gap: 12px; }
 .task {
-  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  padding: 13px; border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 12px;
+  padding: 15px 16px; border: 1px solid var(--border);
   border-radius: 8px; background: var(--bg);
 }
-.task input { width: 18px; height: 18px; accent-color: var(--purple); }
-.task-name { flex: 1; font-size: 13px; }
-.task a { color: var(--purple); font-size: 12px; font-weight: bold; }
+.task-name { flex: 1; min-width: 0; font-size: 13px; }
+.task a {
+  flex-shrink: 0; color: var(--purple);
+  font-size: 12px; font-weight: bold; white-space: nowrap;
+}
 footer {
   padding: 28px 0; text-align: center;
   border-top: 1px solid var(--border); color: var(--muted); font-size: 12px;
@@ -118,6 +121,10 @@ footer {
   .stats { grid-template-columns: repeat(2, 1fr); }
   .card-body { padding: 17px; }
   .nav { align-items: flex-start; flex-direction: column; }
+  .campaign { padding: 14px; }
+  .task { gap: 8px; padding: 14px 12px; }
+  .task-name { font-size: 12px; }
+  .task a { font-size: 11px; }
 }
 </style>
 </head>
@@ -171,7 +178,6 @@ footer {
   </div>
 
   <div class="gallery">
-
     <article class="card">
       <img class="art" src="common.jpg" alt="Common artwork">
       <div class="card-body">
@@ -248,7 +254,6 @@ footer {
         </details>
       </div>
     </article>
-
   </div>
 </div>
 </section>
@@ -278,35 +283,26 @@ footer {
   </div>
 
   <div class="campaign">
-    <div class="section-head">
-      <h3>AFTERIMAGE INK Campaign</h3>
-      <a class="btn btn-primary" href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener noreferrer">OPEN CAMPAIGN POST ↗</a>
-    </div>
-
     <div class="task-list">
-      <label class="task">
-        <input type="checkbox">
+      <div class="task">
         <span class="task-name">Follow @Afterimageink on X</span>
         <a href="https://x.com/Afterimageink" target="_blank" rel="noopener noreferrer">FOLLOW ↗</a>
-      </label>
+      </div>
 
-      <label class="task">
-        <input type="checkbox">
+      <div class="task">
         <span class="task-name">Like the campaign post</span>
         <a href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener noreferrer">LIKE ↗</a>
-      </label>
+      </div>
 
-      <label class="task">
-        <input type="checkbox">
+      <div class="task">
         <span class="task-name">Repost the campaign post</span>
         <a href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener noreferrer">REPOST ↗</a>
-      </label>
+      </div>
 
-      <label class="task">
-        <input type="checkbox">
+      <div class="task">
         <span class="task-name">Comment your wallet address</span>
         <a href="https://x.com/Afterimageink/status/2109905769680470116" target="_blank" rel="noopener noreferrer">COMMENT ↗</a>
-      </label>
+      </div>
     </div>
   </div>
 </div>
@@ -328,4 +324,3 @@ footer {
 </footer>
 </body>
 </html>
-
