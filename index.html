@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#09070e">
-<meta name="description" content="AFTERIMAGE INK — 2,222 creations. Four rarities. One universe on INK Chain.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#09070e" name="theme-color"/>
+<meta content="AFTERIMAGE INK — 2,222 creations. Four rarities. One universe on INK Chain." name="description"/>
 <title>AFTERIMAGE INK</title>
 <style>
 :root {
@@ -165,162 +165,235 @@ footer {
   .nav { align-items: flex-start; flex-direction: column; }
 }
 </style>
-</head>
+<style>#cosmic-archive .wrap{width:min(1100px,92%);margin:auto}
+#cosmic-archive .nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+#cosmic-archive .brand{font-weight:900;letter-spacing:2px;font-size:14px}
+#cosmic-archive .brand span{color:var(--purple)}
+#cosmic-archive .navlinks{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:13px}
+#cosmic-archive .navlinks a:hover{color:var(--text)}
+#cosmic-archive .pill{border:1px solid var(--border);border-radius:999px;padding:8px 13px;color:var(--purple);font-size:12px;white-space:nowrap}
+#cosmic-archive .hero{text-align:center;padding:70px 0 54px}
+#cosmic-archive .eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--purple);font-weight:700}
+#cosmic-archive h1{font-size:clamp(42px,8vw,82px);line-height:1.02;letter-spacing:-2px;margin:18px 0 15px}
+#cosmic-archive .lead{max-width:700px;margin:0 auto;color:var(--muted);font-size:16px}
+#cosmic-archive .hero .pill{display:inline-block;margin-top:24px}
+#cosmic-archive .section{padding:44px 0;border-top:1px solid #251932;scroll-margin-top:90px}
+#cosmic-archive #point-calculator{scroll-margin-top:100px}
+#cosmic-archive .sectionhead{text-align:center;margin-bottom:28px}
+#cosmic-archive .sectionhead h2{font-size:clamp(26px,5vw,38px);line-height:1.2;margin:8px 0}
+#cosmic-archive .sectionhead p{color:var(--muted);margin:0}
+#cosmic-archive .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+#cosmic-archive .panel{background:linear-gradient(145deg,#191126,#0d0a12);border:1px solid var(--border);border-radius:14px;padding:20px}
+#cosmic-archive .rate{font-size:11px;letter-spacing:2px;color:var(--purple);font-weight:bold}
+#cosmic-archive .points{font-size:32px;font-weight:800;line-height:1.3;margin:10px 0 3px}
+#cosmic-archive .small{font-size:12px;color:var(--muted)}
+#cosmic-archive .two{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+#cosmic-archive h3{margin:0 0 8px;font-size:20px}
+#cosmic-archive .muted{color:var(--muted)}
+#cosmic-archive .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+#cosmic-archive .stat{padding:14px;background:#0c0912;border:1px solid #30203f;border-radius:10px}
+#cosmic-archive .stat strong{display:block;color:var(--purple);font-size:22px}
+#cosmic-archive .stat span{font-size:11px;color:var(--muted)}
+#cosmic-archive .walletbox{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:15px}
+#cosmic-archive .input{flex:1;min-width:160px;background:#09070e;border:1px solid var(--border);color:var(--text);padding:12px 13px;border-radius:9px}
+#cosmic-archive .btn{border:1px solid var(--border);background:#21142f;color:var(--text);border-radius:9px;padding:11px 16px;font-weight:700;font-size:12px}
+#cosmic-archive .btn.primary{background:var(--purple);color:#160c21;border-color:var(--purple)}
+#cosmic-archive .btn:hover{filter:brightness(1.12)}
+#cosmic-archive .claimrow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid #30203f}
+#cosmic-archive .claimrow:last-child{border-bottom:0}
+#cosmic-archive .tokenvalue{font-weight:bold;color:var(--purple);white-space:nowrap}
+#cosmic-archive .note{background:#100c18;border:1px dashed #654587;border-radius:10px;padding:13px 15px;font-size:12px;color:var(--muted);margin-top:15px}
+#cosmic-archive .progress{height:8px;background:#2a1d37;border-radius:99px;overflow:hidden;margin:12px 0}
+#cosmic-archive .progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#7e4bc0,#d2b4ff);transition:width .25s}
+#cosmic-archive footer strong{color:var(--text);letter-spacing:2px}
+@media (max-width:760px){#cosmic-archive .grid{grid-template-columns:repeat(2,1fr)}
+#cosmic-archive .two{grid-template-columns:1fr}
+#cosmic-archive .nav{align-items:flex-start;flex-direction:column;padding:15px 0}
+#cosmic-archive .navlinks{gap:15px;flex-wrap:wrap}
+#cosmic-archive .hero{padding:48px 0 38px}
+#cosmic-archive .stats{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:420px){#cosmic-archive .grid{gap:8px}
+#cosmic-archive .panel{padding:14px}
+#cosmic-archive .points{font-size:27px}
+#cosmic-archive .stats{grid-template-columns:1fr}
+#cosmic-archive .navlinks{font-size:12px}}
+#cosmic-archive{--ca-green:#b8f5d0; border-top:1px solid #39264e; margin-top:28px; padding-top:10px;}
+#cosmic-archive .cosmic-localnav{width:min(1100px,92%);margin:10px auto 0;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+#cosmic-archive .cosmic-localnav a{border:1px solid #39264e;border-radius:999px;padding:7px 12px;color:#bd91ff;font-size:12px;}
+#cosmic-archive .cosmic-localnav a:hover{background:#21142f;}
+#cosmic-archive .hero{padding-top:38px;}
+#cosmic-archive .section{scroll-margin-top:25px;}
+#cosmic-archive #point-calculator{scroll-margin-top:25px;}
+#cosmic-archive .note:empty{display:none;}
+@media(max-width:640px){#cosmic-archive .grid{grid-template-columns:repeat(2,minmax(0,1fr));}#cosmic-archive .stats{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:420px){#cosmic-archive .stats{grid-template-columns:1fr;}}
+</style></head>
 <body>
 <header>
-  <div class="container nav">
-    <a class="logo" href="#home">AFTERIMAGE <span>INK</span></a>
-    <nav class="nav-links">
-      <a href="#collection">Collection</a>
-      <a href="#about">About</a>
-      <a href="https://opensea.io/collection/afterimageink" target="_blank" rel="noopener noreferrer">OpenSea ↗</a>
-    </nav>
-  </div>
+<div class="container nav">
+<a class="logo" href="#home">AFTERIMAGE <span>INK</span></a>
+<nav class="nav-links">
+<a href="#collection">Collection</a>
+<a href="#about">About</a>
+<a href="https://opensea.io/collection/afterimageink" rel="noopener noreferrer" target="_blank">OpenSea ↗</a><a href="#cosmic-archive">Cosmic Archive</a>
+</nav>
+</div>
 </header>
-
 <main>
 <div class="container hero" id="home">
-  <div class="banner-wrap">
-    <img class="banner" src="banner.jpg" alt="AFTERIMAGE INK banner">
-  </div>
-  <div class="eyebrow">A New Universe Begins on INK Chain</div>
-  <h1>AFTERIMAGE <span class="purple">INK</span></h1>
-  <div class="intro">
-    <p>Some things fade, but their presence remains.</p>
-    <p>A universe shaped by purple light, endless darkness, and traces of energy left behind.</p>
-    <p>Four rarities, four different visions, each telling its own story of creation, the unknown, hidden power, and worlds waiting to be discovered.</p>
-    <p>This is more than what the eyes can see. It is about what remains after everything changes.</p>
-    <p>A new universe begins on INK Chain. Welcome to AFTERIMAGE INK.</p>
-  </div>
-  <div class="actions">
-    <a class="btn btn-primary" href="https://opensea.io/collection/afterimageink" target="_blank" rel="noopener noreferrer">VIEW ON OPENSEA ↗</a>
-    <a class="btn" href="https://x.com/Afterimageink" target="_blank" rel="noopener noreferrer">FOLLOW ON X ↗</a>
-  </div>
+<div class="banner-wrap">
+<img alt="AFTERIMAGE INK banner" class="banner" src="banner.jpg"/>
 </div>
-
+<div class="eyebrow">A New Universe Begins on INK Chain</div>
+<h1>AFTERIMAGE <span class="purple">INK</span></h1>
+<div class="intro">
+<p>Some things fade, but their presence remains.</p>
+<p>A universe shaped by purple light, endless darkness, and traces of energy left behind.</p>
+<p>Four rarities, four different visions, each telling its own story of creation, the unknown, hidden power, and worlds waiting to be discovered.</p>
+<p>This is more than what the eyes can see. It is about what remains after everything changes.</p>
+<p>A new universe begins on INK Chain. Welcome to AFTERIMAGE INK.</p>
+</div>
+<div class="actions">
+<a class="btn btn-primary" href="https://opensea.io/collection/afterimageink" rel="noopener noreferrer" target="_blank">VIEW ON OPENSEA ↗</a>
+<a class="btn" href="https://x.com/Afterimageink" rel="noopener noreferrer" target="_blank">FOLLOW ON X ↗</a>
+</div>
+</div>
 <section id="collection">
 <div class="container">
-  <div class="section-head">
-    <div class="eyebrow">Explore the Collection</div>
-    <h2>Four Rarities. One Universe.</h2>
-    <p>Discover the story behind every artwork.</p>
-  </div>
-  <div class="stats">
-    <div class="stat"><strong>2,222</strong><span>TOTAL SUPPLY</span></div>
-    <div class="stat"><strong>1,500</strong><span>COMMON</span></div>
-    <div class="stat"><strong>500</strong><span>RARE</span></div>
-    <div class="stat"><strong>180 + 42</strong><span>EPIC + LEGENDARY</span></div>
-  </div>
-  <div class="gallery">
-    <article class="card">
-      <img class="art" src="common.jpg" alt="Common artwork">
-      <div class="card-body">
-        <div class="rarity">COMMON</div>
-        <h3>The Birth of a New Cosmos</h3>
-        <div class="count">1,500 NFTs</div>
-        <details class="story">
-          <summary>READ THE STORY ＋</summary>
-          <div class="story-text">
-            <p>In the silence of the universe, something begins to bloom.</p>
-            <p>A radiant purple flower emerges from the darkness, spreading its luminous petals like waves of energy across an endless cosmic space. Each floating sphere represents a fragment of possibility, while the glowing center symbolizes the beginning of something that has never existed before.</p>
-            <p>This artwork represents creation, potential, and the courage to begin again. Even in the deepest darkness, something beautiful can take shape and become the starting point of a new world.</p>
-            <p>Within the spirit of INK Chain, it reflects the idea that every creation begins with a single spark. What starts as a small idea can grow into something meaningful when it becomes part of a larger universe.</p>
-            <p>A new universe does not need to be discovered. Sometimes, it needs to be created.</p>
-          </div>
-        </details>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="art" src="rare.jpg" alt="Rare artwork">
-      <div class="card-body">
-        <div class="rarity">RARE</div>
-        <h3>The Void That Holds Everything</h3>
-        <div class="count">500 NFTs</div>
-        <details class="story">
-          <summary>READ THE STORY ＋</summary>
-          <div class="story-text">
-            <p>At the center of this cosmic storm lies a darkness that seems to have no end.</p>
-            <p>Purple waves of energy spiral around the void, pulling fragments of the universe into an unknown center. What appears empty may not be empty at all. It may be a place where old forms disappear, where uncertainty takes shape, and where something new waits beyond our understanding.</p>
-            <p>This artwork represents the unknown, the power of change, and the space between endings and beginnings. Not every mystery needs an immediate answer. Sometimes, the most important possibilities exist in places we cannot yet understand.</p>
-            <p>In the growing universe of INK Chain, this piece reflects the open space for ideas, experiments, and creations that have yet to reveal their full potential.</p>
-            <p>The unknown is not always an ending. It can be the beginning of everything.</p>
-          </div>
-        </details>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="art" src="epic.jpg" alt="Epic artwork">
-      <div class="card-body">
-        <div class="rarity">EPIC</div>
-        <h3>Fragments of Infinite Power</h3>
-        <div class="count">180 NFTs</div>
-        <details class="story">
-          <summary>READ THE STORY ＋</summary>
-          <div class="story-text">
-            <p>From the depths of a distant universe, enormous dark crystals rise through a storm of violet energy.</p>
-            <p>Their fractured surfaces reveal flashes of purple light, as if an immense force is hidden within every piece. The crystals are not perfectly formed, yet their broken edges make them even more powerful. Every fracture tells a story of pressure, resistance, and transformation.</p>
-            <p>This artwork represents resilience and the strength that can emerge from difficult changes. What appears broken may still carry extraordinary potential. Every fragment holds part of a greater force, waiting to find its place in the universe.</p>
-            <p>Within the spirit of INK Chain, the scattered crystals can symbolize individual creators and ideas. Each one has its own character, but together they can contribute to something much larger than themselves.</p>
-            <p>Power is not always found in perfection. Sometimes, it lives in the pieces that remain.</p>
-          </div>
-        </details>
-      </div>
-    </article>
-
-    <article class="card">
-      <img class="art" src="Legendary.jpg" alt="Legendary artwork">
-      <div class="card-body">
-        <div class="rarity">LEGENDARY</div>
-        <h3>The Gateway Beyond Infinity</h3>
-        <div class="count">42 NFTs</div>
-        <details class="story">
-          <summary>READ THE STORY ＋</summary>
-          <div class="story-text">
-            <p>Standing between towering black structures and a sea of violet light, an enormous gateway opens into a world beyond the familiar.</p>
-            <p>Its glowing frame separates two realities: the world we know and the possibilities waiting on the other side. Surrounded by cosmic energy and ancient-looking formations, the gateway feels like a passage into a place that has yet to be explored.</p>
-            <p>This artwork represents exploration, ambition, and the courage to step into the unknown. Every gateway marks a choice. We can remain where everything feels familiar, or move forward and discover what lies beyond our current limits.</p>
-            <p>In the context of INK Chain, the gateway represents the opportunities that emerge when creators enter a new digital space, share their work, and become part of a growing creative community.</p>
-            <p>The destination remains unknown, but the journey begins with the decision to step forward.</p>
-            <p>Every new world begins with a doorway someone dares to enter.</p>
-          </div>
-        </details>
-      </div>
-    </article>
-  </div>
+<div class="section-head">
+<div class="eyebrow">Explore the Collection</div>
+<h2>Four Rarities. One Universe.</h2>
+<p>Discover the story behind every artwork.</p>
+</div>
+<div class="stats">
+<div class="stat"><strong>2,222</strong><span>TOTAL SUPPLY</span></div>
+<div class="stat"><strong>1,500</strong><span>COMMON</span></div>
+<div class="stat"><strong>500</strong><span>RARE</span></div>
+<div class="stat"><strong>180 + 42</strong><span>EPIC + LEGENDARY</span></div>
+</div>
+<div class="gallery">
+<article class="card">
+<img alt="Common artwork" class="art" src="common.jpg"/>
+<div class="card-body">
+<div class="rarity">COMMON</div>
+<h3>The Birth of a New Cosmos</h3>
+<div class="count">1,500 NFTs</div>
+<details class="story">
+<summary>READ THE STORY ＋</summary>
+<div class="story-text">
+<p>In the silence of the universe, something begins to bloom.</p>
+<p>A radiant purple flower emerges from the darkness, spreading its luminous petals like waves of energy across an endless cosmic space. Each floating sphere represents a fragment of possibility, while the glowing center symbolizes the beginning of something that has never existed before.</p>
+<p>This artwork represents creation, potential, and the courage to begin again. Even in the deepest darkness, something beautiful can take shape and become the starting point of a new world.</p>
+<p>Within the spirit of INK Chain, it reflects the idea that every creation begins with a single spark. What starts as a small idea can grow into something meaningful when it becomes part of a larger universe.</p>
+<p>A new universe does not need to be discovered. Sometimes, it needs to be created.</p>
+</div>
+</details>
+</div>
+</article>
+<article class="card">
+<img alt="Rare artwork" class="art" src="rare.jpg"/>
+<div class="card-body">
+<div class="rarity">RARE</div>
+<h3>The Void That Holds Everything</h3>
+<div class="count">500 NFTs</div>
+<details class="story">
+<summary>READ THE STORY ＋</summary>
+<div class="story-text">
+<p>At the center of this cosmic storm lies a darkness that seems to have no end.</p>
+<p>Purple waves of energy spiral around the void, pulling fragments of the universe into an unknown center. What appears empty may not be empty at all. It may be a place where old forms disappear, where uncertainty takes shape, and where something new waits beyond our understanding.</p>
+<p>This artwork represents the unknown, the power of change, and the space between endings and beginnings. Not every mystery needs an immediate answer. Sometimes, the most important possibilities exist in places we cannot yet understand.</p>
+<p>In the growing universe of INK Chain, this piece reflects the open space for ideas, experiments, and creations that have yet to reveal their full potential.</p>
+<p>The unknown is not always an ending. It can be the beginning of everything.</p>
+</div>
+</details>
+</div>
+</article>
+<article class="card">
+<img alt="Epic artwork" class="art" src="epic.jpg"/>
+<div class="card-body">
+<div class="rarity">EPIC</div>
+<h3>Fragments of Infinite Power</h3>
+<div class="count">180 NFTs</div>
+<details class="story">
+<summary>READ THE STORY ＋</summary>
+<div class="story-text">
+<p>From the depths of a distant universe, enormous dark crystals rise through a storm of violet energy.</p>
+<p>Their fractured surfaces reveal flashes of purple light, as if an immense force is hidden within every piece. The crystals are not perfectly formed, yet their broken edges make them even more powerful. Every fracture tells a story of pressure, resistance, and transformation.</p>
+<p>This artwork represents resilience and the strength that can emerge from difficult changes. What appears broken may still carry extraordinary potential. Every fragment holds part of a greater force, waiting to find its place in the universe.</p>
+<p>Within the spirit of INK Chain, the scattered crystals can symbolize individual creators and ideas. Each one has its own character, but together they can contribute to something much larger than themselves.</p>
+<p>Power is not always found in perfection. Sometimes, it lives in the pieces that remain.</p>
+</div>
+</details>
+</div>
+</article>
+<article class="card">
+<img alt="Legendary artwork" class="art" src="Legendary.jpg"/>
+<div class="card-body">
+<div class="rarity">LEGENDARY</div>
+<h3>The Gateway Beyond Infinity</h3>
+<div class="count">42 NFTs</div>
+<details class="story">
+<summary>READ THE STORY ＋</summary>
+<div class="story-text">
+<p>Standing between towering black structures and a sea of violet light, an enormous gateway opens into a world beyond the familiar.</p>
+<p>Its glowing frame separates two realities: the world we know and the possibilities waiting on the other side. Surrounded by cosmic energy and ancient-looking formations, the gateway feels like a passage into a place that has yet to be explored.</p>
+<p>This artwork represents exploration, ambition, and the courage to step into the unknown. Every gateway marks a choice. We can remain where everything feels familiar, or move forward and discover what lies beyond our current limits.</p>
+<p>In the context of INK Chain, the gateway represents the opportunities that emerge when creators enter a new digital space, share their work, and become part of a growing creative community.</p>
+<p>The destination remains unknown, but the journey begins with the decision to step forward.</p>
+<p>Every new world begins with a doorway someone dares to enter.</p>
+</div>
+</details>
+</div>
+</article>
+</div>
 </div>
 </section>
-
 <section id="about">
 <div class="container">
-  <div class="section-head">
-    <div class="eyebrow">Our Universe</div>
-    <h2>More Than What You See</h2>
-  </div>
-  <div class="about">
-    <p>Some things fade, but their presence remains.</p>
-    <p>AFTERIMAGE INK is a universe shaped by purple light, endless darkness, and traces of energy left behind.</p>
-    <p>Its four rarities explore creation, the unknown, hidden power, and the worlds waiting to be discovered.</p>
-    <p>Each artwork tells a different story, but together they form one universe. A place where imagination leaves a trace and every creation becomes part of something larger.</p>
-    <p>A new universe begins on INK Chain. Welcome to AFTERIMAGE INK.</p>
-  </div>
+<div class="section-head">
+<div class="eyebrow">Our Universe</div>
+<h2>More Than What You See</h2>
+</div>
+<div class="about">
+<p>Some things fade, but their presence remains.</p>
+<p>AFTERIMAGE INK is a universe shaped by purple light, endless darkness, and traces of energy left behind.</p>
+<p>Its four rarities explore creation, the unknown, hidden power, and the worlds waiting to be discovered.</p>
+<p>Each artwork tells a different story, but together they form one universe. A place where imagination leaves a trace and every creation becomes part of something larger.</p>
+<p>A new universe begins on INK Chain. Welcome to AFTERIMAGE INK.</p>
+</div>
 </div>
 </section>
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-links">
-      <a href="https://opensea.io/collection/afterimageink" target="_blank" rel="noopener noreferrer">OpenSea</a>
-      <a href="https://x.com/Afterimageink" target="_blank" rel="noopener noreferrer">X / Twitter</a>
-      <a href="#collection">Collection</a>
-    </div>
-    <p><strong>AFTERIMAGE INK</strong></p>
-    <p>A new universe begins on INK Chain.</p>
-    <p>© 2026 AFTERIMAGE INK</p>
-  </div>
-</footer>
-</body>
-</html>
-
+<div id="cosmic-archive"><div class="cosmic-localnav"><a href="#utility">Utility</a><a href="#point-calculator">Point System</a><a href="#tokenomics">Tokenomics</a></div><section class="hero wrap">
+<div class="eyebrow">A New Chapter Begins</div>
+<h1>COSMIC <span style="color:var(--purple)">ARCHIVE</span></h1>
+<p class="lead">Cosmic Archive extends AFTERIMAGE INK beyond digital art through a vision for on-chain participation.</p>
+<span class="pill">One Collection. One Universe. Equal Access.</span>
+<div class="walletbox" style="justify-content:center">
+<a class="btn primary" href="https://opensea.io/collection/afterimageink" rel="noopener noreferrer" target="_blank">EXPLORE AFTERIMAGE INK ON OPENSEA ↗</a>
+</div>
+</section><section class="section" id="utility">
+<div class="wrap">
+<div class="sectionhead">
+<div class="eyebrow">More Than a Collection</div>
+<h2>Discover Your Place in the Cosmos</h2>
+<p>Cosmic Archive brings together NFT ownership, daily point accumulation, and a planned COSMIC Token ecosystem.</p>
+</div>
+<div class="grid">
+<article class="panel"><div class="rate">COMMON</div><div class="points">+1 <span class="small">point/day</span></div><div class="small">Earned daily for each eligible Common NFT held.</div></article>
+<article class="panel"><div class="rate">RARE</div><div class="points">+2 <span class="small">points/day</span></div><div class="small">Earned daily for each eligible Rare NFT held.</div></article>
+<article class="panel"><div class="rate">EPIC</div><div class="points">+3 <span class="small">points/day</span></div><div class="small">Earned daily for each eligible Epic NFT held.</div></article>
+<article class="panel"><div class="rate">LEGENDARY</div><div class="points">+4 <span class="small">points/day</span></div><div class="small">Earned daily for each eligible Legendary NFT held.</div></article>
+</div>
+</div>
+</section><section class="section" id="points">
+<div class="wrap two">
+<div class="panel">
+<div class="eyebrow">Proposed Tokenomics</div>
+<h3 style="margin-top:8px">From Cosmic Points to COSMIC</h3>
+<p class="muted">Accumulate Cosmic Points based on the rarity and quantity of eligible AFTERIMAGE INK NFTs you hold. Under the planned model, accumulated points can be redeemed for COSMIC Tokens at the designated conversion ratio.</p>
+</div>
+<div class="panel" id="point-calculator">
+<div class="eyebrow">Point Calculator</div>
+<h3 style="margin-top:8px">Calculate Your Cosmic Points</h3>
+<p class="muted small">Adjust the NFT quantities to preview point calculations. Use this calculator to estimate daily and monthly point totals from the number of NFTs you hold.</p>
+<div class="claimrow"
