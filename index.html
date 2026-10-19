@@ -221,6 +221,37 @@ footer {
 .cosmic-archive-shell .ca-claimrow{display:grid;grid-template-columns:minmax(0,1fr) 95px auto;align-items:center;gap:10px}
 .cosmic-archive-shell .ca-input{width:100%;min-width:0}
 @media(max-width:420px){.cosmic-archive-shell .ca-claimrow{grid-template-columns:minmax(0,1fr) 76px}.cosmic-archive-shell .ca-tokenvalue{grid-column:2;text-align:right}}
+
+/* Final responsive fixes: calculator and token allocation */
+.cosmic-archive-shell .ca-hero .ca-pill { margin-top: 24px; }
+.cosmic-archive-shell .ca-claimrow { min-width: 0; }
+.cosmic-archive-shell .ca-claimrow label,
+.cosmic-archive-shell .ca-claimrow > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.cosmic-archive-shell .ca-claimrow .ca-input { width: 100%; min-width: 0; max-width: 105px; justify-self: end; }
+.cosmic-archive-shell #point-calculator .ca-claimrow { display: grid; grid-template-columns: minmax(0,1fr) minmax(72px,105px) minmax(52px,auto); gap: 10px; }
+.cosmic-archive-shell #point-calculator .ca-tokenvalue { text-align: right; white-space: nowrap; }
+.cosmic-archive-shell #point-calculator .ca-stats { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.cosmic-archive-shell #point-calculator .ca-stat { min-width: 0; }
+.cosmic-archive-shell #point-calculator .ca-stat strong { overflow-wrap: anywhere; }
+.cosmic-archive-shell #tokenomics .ca-panel > .ca-claimrow { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+.cosmic-archive-shell #tokenomics .ca-panel > .ca-claimrow strong { flex: 0 0 auto; text-align: right; white-space: normal; overflow-wrap: anywhere; max-width: 52%; }
+.cosmic-archive-shell #tokenomics .ca-panel > .ca-claimrow span { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+@media(max-width:760px) {
+  .cosmic-archive-shell .ca-two { grid-template-columns: minmax(0,1fr); }
+  .cosmic-archive-shell #point-calculator .ca-stats { grid-template-columns: 1fr; }
+  .cosmic-archive-shell #tokenomics .ca-grid[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+  .cosmic-archive-shell #tokenomics .ca-panel > .ca-claimrow { align-items: flex-start; }
+}
+@media(max-width:480px) {
+  .cosmic-archive-shell #point-calculator .ca-claimrow { grid-template-columns: minmax(0,1fr) 78px; gap: 8px; }
+  .cosmic-archive-shell #point-calculator .ca-claimrow .ca-tokenvalue { grid-column: 2; }
+  .cosmic-archive-shell #point-calculator .ca-claimrow label { grid-column: 1; grid-row: 1; }
+  .cosmic-archive-shell #point-calculator .ca-claimrow .ca-input { grid-column: 2; grid-row: 1; }
+  .cosmic-archive-shell #point-calculator .ca-claimrow .ca-tokenvalue { grid-row: 2; }
+  .cosmic-archive-shell #tokenomics .ca-panel > .ca-claimrow { gap: 10px; }
+  .cosmic-archive-shell #tokenomics .ca-panel > .ca-claimrow strong { max-width: 48%; font-size: 13px; }
+}
+
 </style>
 </head>
 <body>
@@ -368,17 +399,14 @@ footer {
 
 <div class="cosmic-archive-shell" id="cosmic-archive">
 <div class="ca-archive-inner">
-  <ca-section class="ca-hero ca-wrap">
+  <section class="ca-hero ca-wrap">
     <div class="ca-eyebrow">A New Chapter Begins</div>
     <h1>COSMIC <span style="color:var(--purple)">ARCHIVE</span></h1>
     <p class="ca-lead">Cosmic Archive extends AFTERIMAGE INK beyond digital art through a vision for on-chain participation.</p>
     <span class="ca-pill">One Collection. One Universe. Equal Access.</span>
-    <div class="ca-walletbox" style="justify-content:center">
-      <a class="ca-btn primary" href="https://opensea.io/collection/afterimageink" target="_blank" rel="noopener noreferrer">EXPLORE AFTERIMAGE INK ON OPENSEA ↗</a>
-    </div>
-  </ca-section>
+  </section>
 
-  <ca-section class="ca-section" id="utility">
+  <section class="ca-section" id="utility">
     <div class="ca-wrap">
       <div class="ca-sectionhead">
         <div class="ca-eyebrow">More Than a Collection</div>
@@ -387,41 +415,38 @@ footer {
       </div>
       <div class="ca-grid">
         <article class="ca-panel"><div class="ca-rate">COMMON</div><div class="ca-points">+1 <span class="ca-small">point/day</span></div><div class="ca-small">Earned daily for each eligible Common NFT held.</div></article>
-        <article class="ca-panel"><div class="ca-rate">RARE</div><div class="ca-points">+2 <span class="ca-small">ca-points/day</span></div><div class="ca-small">Earned daily for each eligible Rare NFT held.</div></article>
-    <article class="ca-panel"><div class="ca-rate">EPIC</div><div class="ca-points">+3 <span class="ca-small">ca-points/day</span></div><div class="ca-small">Earned daily for each eligible Epic NFT held.</div></article>
-        <article class="ca-panel"><div class="ca-rate">LEGENDARY</div><div class="ca-points">+4 <span class="ca-small">ca-points/day</span></div><div class="ca-small">Earned daily for each eligible Legendary NFT held.</div></article>
+        <article class="ca-panel"><div class="ca-rate">RARE</div><div class="ca-points">+2 <span class="ca-small">points/day</span></div><div class="ca-small">Earned daily for each eligible Rare NFT held.</div></article>
+        <article class="ca-panel"><div class="ca-rate">EPIC</div><div class="ca-points">+3 <span class="ca-small">points/day</span></div><div class="ca-small">Earned daily for each eligible Epic NFT held.</div></article>
+        <article class="ca-panel"><div class="ca-rate">LEGENDARY</div><div class="ca-points">+4 <span class="ca-small">points/day</span></div><div class="ca-small">Earned daily for each eligible Legendary NFT held.</div></article>
       </div>
     </div>
-  </ca-section>
-
-  <ca-section class="ca-section" id="ca-points">
+  </section>
+  <section class="ca-section" id="ca-points">
     <div class="ca-wrap ca-two">
       <div class="ca-panel">
         <div class="ca-eyebrow">Proposed Tokenomics</div>
         <h3 style="margin-top:8px">From Cosmic Points to COSMIC</h3>
-        <p class="ca-muted">Accumulate Cosmic Points based on the rarity and quantity of eligible AFTERIMAGE INK NFTs you hold. Under the planned model, accumulated ca-points can be redeemed for COSMIC Tokens at the designated conversion ratio.</p>
+        <p class="ca-muted">Accumulate Cosmic Points based on the rarity and quantity of eligible AFTERIMAGE INK NFTs you hold. Under the planned model, accumulated points can be redeemed for COSMIC Tokens at the designated conversion ratio.</p>
       </div>
 
       <div class="ca-panel" id="point-calculator">
         <div class="ca-eyebrow">Point Calculator</div>
         <h3 style="margin-top:8px">Calculate Your Cosmic Points</h3>
         <p class="ca-muted ca-small">Adjust the NFT quantities to preview point calculations. Use this calculator to estimate daily and monthly point totals from the number of NFTs you hold.</p>
-        <div class="ca-claimrow"><label for="common">Common NFTs</label><ca-input class="ca-input ca-qty" id="common" type="number" min="0" max="2222" value="1" style="max-width:105px"><span class="ca-tokenvalue" id="commonPoints">1 PT</span></div>
-        <div class="ca-claimrow"><label for="rare">Rare NFTs</label><ca-input class="ca-input ca-qty" id="rare" type="number" min="0" max="2222" value="0" style="max-width:105px"><span class="ca-tokenvalue" id="rarePoints">0 PT</span></div>
-        <div class="ca-claimrow"><label for="epic">Epic NFTs</label><ca-input class="ca-input ca-qty" id="epic" type="number" min="0" max="2222" value="0" style="max-width:105px"><span class="ca-tokenvalue" id="epicPoints">0 PT</span></div>
-        <div class="ca-claimrow"><label for="legendary">Legendary NFTs</label><ca-input class="ca-input ca-qty" id="legendary" type="number" min="0" max="2222" value="0" style="max-width:105px"><span class="ca-tokenvalue" id="legendaryPoints">0 PT</span></div>
+        <div class="ca-claimrow"><label for="common">Common NFTs</label><input class="ca-input ca-qty" id="common" type="number" min="0" max="2222" value="1" style="max-width:105px"><span class="ca-tokenvalue" id="commonPoints">1 PT</span></div>
+        <div class="ca-claimrow"><label for="rare">Rare NFTs</label><input class="ca-input ca-qty" id="rare" type="number" min="0" max="2222" value="0" style="max-width:105px"><span class="ca-tokenvalue" id="rarePoints">0 PT</span></div>
+        <div class="ca-claimrow"><label for="epic">Epic NFTs</label><input class="ca-input ca-qty" id="epic" type="number" min="0" max="2222" value="0" style="max-width:105px"><span class="ca-tokenvalue" id="epicPoints">0 PT</span></div>
+        <div class="ca-claimrow"><label for="legendary">Legendary NFTs</label><input class="ca-input ca-qty" id="legendary" type="number" min="0" max="2222" value="0" style="max-width:105px"><span class="ca-tokenvalue" id="legendaryPoints">0 PT</span></div>
         <div class="ca-stats">
-          <div class="ca-stat"><strong id="dailyTotal">1</strong><span>Daily ca-points</span></div>
-          <div class="ca-stat"><strong id="monthlyTotal">30</strong><span>30-day ca-points</span></div>
+          <div class="ca-stat"><strong id="dailyTotal">1</strong><span>Daily points</span></div>
+          <div class="ca-stat"><strong id="monthlyTotal">30</strong><span>30-day points</span></div>
           <div class="ca-stat"><strong id="cosmicTotal">3</strong><span>Potential COSMIC / 30 days*</span></div>
         </div>
-        <div class="ca-note">*Estimated conversion at the planned ratio of 10 ca-points = 1 COSMIC. Conversion is not available until the token system launches.</div>
+        <div class="ca-note">*Estimated conversion at the planned ratio of 10 points = 1 COSMIC. Conversion is not available until the token system launches.</div>
       </div>
     </div>
-  </ca-section>
-
-
-  <ca-section class="ca-section" id="tokenomics">
+  </section>
+  <section class="ca-section" id="tokenomics">
     <div class="ca-wrap">
       <div class="ca-sectionhead">
         <div class="ca-eyebrow">COSMIC Tokenomics</div>
@@ -458,12 +483,12 @@ footer {
         <article class="ca-panel">
           <div class="ca-rate">POINT EARNING</div>
           <h3 style="margin-top:8px">Daily Points</h3>
-          <p class="ca-muted ca-small">Common: 1 point · Rare: 2 ca-points · Epic: 3 ca-points · Legendary: 4 ca-points per eligible NFT each day.</p>
+          <p class="ca-muted ca-small">Common: 1 point · Rare: 2 points · Epic: 3 points · Legendary: 4 points per eligible NFT each day.</p>
         </article>
         <article class="ca-panel">
           <div class="ca-rate">CONVERSION</div>
           <h3 style="margin-top:8px">10 Points = 1 COSMIC</h3>
-          <p class="ca-muted ca-small">Under the planned model, every 10 Cosmic Points can be exchanged for 1 COSMIC Token. Redeemed ca-points are intended to be deducted from the holder’s balance.</p>
+          <p class="ca-muted ca-small">Under the planned model, every 10 Cosmic Points can be exchanged for 1 COSMIC Token. Redeemed points are intended to be deducted from the holder’s balance.</p>
         </article>
         <article class="ca-panel">
           <div class="ca-rate">MONTHLY LIMIT</div>
@@ -479,14 +504,12 @@ footer {
 
       <div class="ca-panel" style="margin-top:18px">
         <h3>Daily Point Emission Estimate</h3>
-        <p class="ca-muted">If all 2,222 NFTs claimed daily, the collection would generate up to 3,208 Cosmic Points per day. At the planned conversion ratio, this would equal 320.8 COSMIC per day, 9,624 COSMIC over 30 days, or 117,092 COSMIC over 365 days, before accounting for participation levels and redemption rules.</p>
-        <div class="ca-note"></div>
+        <p class="ca-muted">If all 2,222 NFTs claimed daily, the collection would generate up to 3,208 Cosmic Points per day. At the planned conversion ratio, this would equal up to 320 COSMIC per day after rounding down, 9,624 COSMIC over 30 days, or 117,092 COSMIC over 365 days, before accounting for participation levels and redemption rules.</p>
+        <div class="ca-note">This is a proposed model only. No COSMIC token launch, wallet verification, or redemption function is currently active.</div>
       </div>
     </div>
-  </ca-section>
-
-
-</div></div>
+  </section>
+  </div></div>
 </main>
 
 <footer>
@@ -522,3 +545,6 @@ updateCosmicCalculator();
 </script>
 </body>
 </html>
+
+
+            
