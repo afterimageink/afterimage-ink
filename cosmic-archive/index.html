@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09070e">
+<meta name="description" content="Explore Cosmic Archive, the planned utility experience for AFTERIMAGE INK. Discover the collection and calculate Cosmic Points.">
+<title>Cosmic Archive — AFTERIMAGE INK</title>
+<style>
+:root{--bg:#09070e;--panel:#151020;--panel2:#100c18;--purple:#bd91ff;--text:#f6efff;--muted:#b2a5c2;--border:#39264e;--green:#b8f5d0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,#2b1742 0%,var(--bg) 48%);color:var(--text);font:15px/1.65 Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(1100px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(9,7,14,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:900;letter-spacing:2px;font-size:14px}.brand span{color:var(--purple)}
+.navlinks{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:13px}
+.navlinks a:hover{color:var(--text)}
+.pill{border:1px solid var(--border);border-radius:999px;padding:8px 13px;color:var(--purple);font-size:12px;white-space:nowrap}
+.hero{text-align:center;padding:70px 0 54px}
+.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--purple);font-weight:700}
+h1{font-size:clamp(42px,8vw,82px);line-height:1.02;letter-spacing:-2px;margin:18px 0 15px}
+.lead{max-width:700px;margin:0 auto;color:var(--muted);font-size:16px}
+.hero .pill{display:inline-block;margin-top:24px}
+.section{padding:44px 0;border-top:1px solid #251932;scroll-margin-top:90px}
+#point-calculator{scroll-margin-top:100px}
+.sectionhead{text-align:center;margin-bottom:28px}.sectionhead h2{font-size:clamp(26px,5vw,38px);line-height:1.2;margin:8px 0}.sectionhead p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.panel{background:linear-gradient(145deg,#191126,#0d0a12);border:1px solid var(--border);border-radius:14px;padding:20px}
+.rate{font-size:11px;letter-spacing:2px;color:var(--purple);font-weight:bold}.points{font-size:32px;font-weight:800;line-height:1.3;margin:10px 0 3px}.small{font-size:12px;color:var(--muted)}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+h3{margin:0 0 8px;font-size:20px}.muted{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.stat{padding:14px;background:#0c0912;border:1px solid #30203f;border-radius:10px}
+.stat strong{display:block;color:var(--purple);font-size:22px}.stat span{font-size:11px;color:var(--muted)}
+.walletbox{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:15px}
+.input{flex:1;min-width:160px;background:#09070e;border:1px solid var(--border);color:var(--text);padding:12px 13px;border-radius:9px}
+.btn{border:1px solid var(--border);background:#21142f;color:var(--text);border-radius:9px;padding:11px 16px;font-weight:700;font-size:12px}
+.btn.primary{background:var(--purple);color:#160c21;border-color:var(--purple)}
+.btn:hover{filter:brightness(1.12)}
+.claimrow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid #30203f}
+.claimrow:last-child{border-bottom:0}
+.tokenvalue{font-weight:bold;color:var(--purple);white-space:nowrap}
+.note{background:#100c18;border:1px dashed #654587;border-radius:10px;padding:13px 15px;font-size:12px;color:var(--muted);margin-top:15px}
+.progress{height:8px;background:#2a1d37;border-radius:99px;overflow:hidden;margin:12px 0}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#7e4bc0,#d2b4ff);transition:width .25s}
+footer{border-top:1px solid var(--border);padding:26px 0;color:var(--muted);text-align:center;font-size:12px;margin-top:28px}
+footer strong{color:var(--text);letter-spacing:2px}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column;padding:15px 0}.navlinks{gap:15px;flex-wrap:wrap}.hero{padding:48px 0 38px}.stats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:420px){.grid{gap:8px}.panel{padding:14px}.points{font-size:27px}.stats{grid-template-columns:1fr}.navlinks{font-size:12px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">AFTERIMAGE <span>INK</span></a>
+    <nav class="navlinks">
+      <a href="#utility">Utility</a>
+      <a href="#point-calculator">Point System</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a class="pill" href="https://opensea.io/collection/afterimageink" target="_blank" rel="noopener noreferrer">EXPLORE THE NFT COLLECTION ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="eyebrow">A New Chapter Begins</div>
+    <h1>COSMIC <span style="color:var(--purple)">ARCHIVE</span></h1>
+    <p class="lead">Cosmic Archive extends AFTERIMAGE INK beyond digital art through a vision for on-chain participation.</p>
+    <span class="pill">One Collection. One Universe. Equal Access.</span>
+    <div class="walletbox" style="justify-content:center">
+      <a class="btn primary" href="https://opensea.io/collection/afterimageink" target="_blank" rel="noopener noreferrer">EXPLORE AFTERIMAGE INK ON OPENSEA ↗</a>
+    </div>
+  </section>
+
+  <section class="section" id="utility">
+    <div class="wrap">
+      <div class="sectionhead">
+        <div class="eyebrow">More Than a Collection</div>
+        <h2>Discover Your Place in the Cosmos</h2>
+        <p>Cosmic Archive brings together NFT ownership, daily point accumulation, and a planned COSMIC Token ecosystem.</p>
+      </div>
+      <div class="grid">
+        <article class="panel"><div class="rate">COMMON</div><div class="points">+1 <span class="small">point/day</span></div><div class="small">Earned daily for each eligible Common NFT held.</div></article>
+        <article class="panel"><div class="rate">RARE</div><div class="points">+2 <span class="small">points/day</span></div><div class="small">Earned daily for each eligible Rare NFT held.</div></article>
+        <article class="panel"><div class="rate">EPIC</div><div class="points">+3 <span class="small">points/day</span></div><div class="small">Earned daily for each eligible Epic NFT held.</div></article>
+        <article class="panel"><div class="rate">LEGENDARY</div><div class="points">+4 <span class="small">points/day</span></div><div class="small">Earned daily for each eligible Legendary NFT held.</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="points">
+    <div class="wrap two">
+      <div class="panel">
+        <div class="eyebrow">Proposed Tokenomics</div>
+        <h3 style="margin-top:8px">From Cosmic Points to COSMIC</h3>
+        <p class="muted">Accumulate Cosmic Points based on the rarity and quantity of eligible AFTERIMAGE INK NFTs you hold. Under the planned model, accumulated points can be redeemed for COSMIC Tokens at the designated conversion ratio.</p>
+      </div>
+
+      <div class="panel" id="point-calculator">
+        <div class="eyebrow">Point Calculator</div>
+        <h3 style="margin-top:8px">Calculate Your Cosmic Points</h3>
+        <p class="muted small">Adjust the NFT quantities to preview point calculations. Use this calculator to estimate daily and monthly point totals from the number of NFTs you hold.</p>
+        <div class="claimrow"><label for="common">Common NFTs</label><input class="input qty" id="common" type="number" min="0" max="2222" value="1" style="max-width:105px"><span class="tokenvalue" id="commonPoints">1 PT</span></div>
+        <div class="claimrow"><label for="rare">Rare NFTs</label><input class="input qty" id="rare" type="number" min="0" max="2222" value="0" style="max-width:105px"><span class="tokenvalue" id="rarePoints">0 PT</span></div>
+        <div class="claimrow"><label for="epic">Epic NFTs</label><input class="input qty" id="epic" type="number" min="0" max="2222" value="0" style="max-width:105px"><span class="tokenvalue" id="epicPoints">0 PT</span></div>
+        <div class="claimrow"><label for="legendary">Legendary NFTs</label><input class="input qty" id="legendary" type="number" min="0" max="2222" value="0" style="max-width:105px"><span class="tokenvalue" id="legendaryPoints">0 PT</span></div>
+        <div class="stats">
+          <div class="stat"><strong id="dailyTotal">1</strong><span>Daily points</span></div>
+          <div class="stat"><strong id="monthlyTotal">30</strong><span>30-day points</span></div>
+          <div class="stat"><strong id="cosmicTotal">3</strong><span>Potential COSMIC / 30 days*</span></div>
+        </div>
+        <div class="note">*Estimated conversion at the planned ratio of 10 points = 1 COSMIC. Conversion is not available until the token system launches.</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="tokenomics">
+    <div class="wrap">
+      <div class="sectionhead">
+        <div class="eyebrow">COSMIC Tokenomics</div>
+        <h2>A Token Model for the Ecosystem</h2>
+        <p>An overview of the planned COSMIC Token distribution and redemption model.</p>
+      </div>
+
+      <div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px;margin:0 auto 18px">
+        <article class="panel">
+          <div class="rate">TOTAL SUPPLY</div>
+          <div class="points">100,000,000</div>
+          <div class="small">COSMIC · proposed maximum supply</div>
+        </article>
+        <article class="panel">
+          <div class="rate">HOLDER REDEMPTION</div>
+          <div class="points">20,000,000</div>
+          <div class="small">20% of proposed total supply</div>
+        </article>
+      </div>
+
+      <div class="panel" style="margin-bottom:18px">
+        <h3>COSMIC Token Allocation</h3>
+        <p class="muted small">The allocation framework outlines the intended distribution of COSMIC Tokens across holders, ecosystem development, liquidity, and community growth.</p>
+        <div class="claimrow"><span>Holder redemption</span><strong class="tokenvalue">20% · 20,000,000</strong></div>
+        <div class="claimrow"><span>Treasury and ecosystem</span><strong>25% · 25,000,000</strong></div>
+        <div class="claimrow"><span>Liquidity</span><strong>15% · 15,000,000</strong></div>
+        <div class="claimrow"><span>Project development</span><strong>15% · 15,000,000</strong></div>
+        <div class="claimrow"><span>Team and contributors</span><strong>10% · 10,000,000</strong></div>
+        <div class="claimrow"><span>Community growth</span><strong>10% · 10,000,000</strong></div>
+        <div class="claimrow"><span>Reserve</span><strong>5% · 5,000,000</strong></div>
+      </div>
+
+      <div class="grid">
+        <article class="panel">
+          <div class="rate">POINT EARNING</div>
+          <h3 style="margin-top:8px">Daily Points</h3>
+          <p class="muted small">Common: 1 point · Rare: 2 points · Epic: 3 points · Legendary: 4 points per eligible NFT each day.</p>
+        </article>
+        <article class="panel">
+          <div class="rate">CONVERSION</div>
+          <h3 style="margin-top:8px">10 Points = 1 COSMIC</h3>
+          <p class="muted small">Under the planned model, every 10 Cosmic Points can be exchanged for 1 COSMIC Token. Redeemed points are intended to be deducted from the holder’s balance.</p>
+        </article>
+        <article class="panel">
+          <div class="rate">MONTHLY LIMIT</div>
+          <h3 style="margin-top:8px">10,000 COSMIC</h3>
+          <p class="muted small">A planned monthly redemption limit designed to help manage token distribution over time.</p>
+        </article>
+        <article class="panel">
+          <div class="rate">NETWORK</div>
+          <h3 style="margin-top:8px">INK Chain</h3>
+          <p class="muted small">Planned network. Token deployment and redemption details will be announced before launch.</p>
+        </article>
+      </div>
+
+      <div class="panel" style="margin-top:18px">
+        <h3>Daily Point Emission Estimate</h3>
+        <p class="muted">If all 2,222 NFTs claimed daily, the collection would generate up to 3,208 Cosmic Points per day. At the planned conversion ratio, this would equal 320.8 COSMIC per day, 9,624 COSMIC over 30 days, or 117,092 COSMIC over 365 days, before accounting for participation levels and redemption rules.</p>
+        <div class="note"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>AFTERIMAGE INK</strong>
+    <p>Cosmic Archive marks the next chapter in the AFTERIMAGE INK universe.</p>
+    <p>Token utility and redemption details will be announced before launch.</p>
+  </div>
+</footer>
+<script>
+const rates = {common:1, rare:2, epic:3, legendary:4};
+function updateCalculator(){
+  let daily=0;
+  for(const [name,rate] of Object.entries(rates)){
+    const el=document.getElementById(name);
+    let qty=Math.max(0,Math.min(2222,Math.floor(Number(el.value)||0)));
+    el.value=qty;
+    const pts=qty*rate;
+    document.getElementById(name+'Points').textContent=pts.toLocaleString()+' PT';
+    daily+=pts;
+  }
+  const monthly=daily*30;
+  document.getElementById('dailyTotal').textContent=daily.toLocaleString();
+  document.getElementById('monthlyTotal').textContent=monthly.toLocaleString();
+  document.getElementById('cosmicTotal').textContent=Math.floor(monthly/10).toLocaleString();
+}
+document.querySelectorAll('.qty').forEach(el=>el.addEventListener('input',updateCalculator));
+
+updateCalculator();
+</script>
+</body>
+                                                                             </html>
+                                                                             
